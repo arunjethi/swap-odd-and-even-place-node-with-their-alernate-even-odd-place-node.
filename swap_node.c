@@ -1,14 +1,19 @@
-// Swaping the node: even with even node also odd with odd node.
+// Swaping the node: even with even node && odd with odd node.
+// input: 1 12 1 11 1 10 1 9 1 8 1 7 1 6 1 5 1 4 1 3 1 2 1 1 0
+// output: 3 4 1 2 7 8 5 6 11 12 9 10 
 
 #include <stdio.h>
 #include <stdlib.h>
 
+// creating a structure for linked list
 typedef struct node
 {
     int data;
     struct node *next;
-} Node;
+} Node;    // using typedef we can gave any name to our structure here " Node " is provided.
 
+
+// function where actual node will be swapped
 void swap(Node *first, Node *second)
 {
     Node *temp = first->next;
@@ -17,6 +22,7 @@ void swap(Node *first, Node *second)
     second->next = temp;
 }
 
+// swap node function called
 Node *Swap_node(Node *head)
 {
     if (head == NULL)
@@ -71,6 +77,8 @@ Node *Swap_node(Node *head)
     }
     return head;
 }
+
+// function to add the node at the beginning of the linked list
 Node *insertion_at_begin(Node *head)
 {
     Node *temp = (Node *)malloc(sizeof(Node));
@@ -90,6 +98,8 @@ Node *insertion_at_begin(Node *head)
 
     return head;
 }
+
+// function which will display the data of linked list 
 void display(Node *head)
 {
     if (head == NULL)
@@ -106,7 +116,7 @@ int main()
 {
     Node *head = NULL;
     int choice;
-// 1 12 1 11 1 10 1 9 1 8 1 7 1 6 1 5 1 4 1 3 1 2 1 1 1 -1 1 -2 1 -3 1 -4 1 -5 1 -6 1 -7 1 -8 1 -9 1 -10 1 -11 1 -12 0
+    
     while (1)
     {
         printf("Enter 1 to continue: ");
@@ -116,7 +126,7 @@ int main()
         else
             break;
     }
-    head = Swap_node(head);
-    display(head);
+    head = Swap_node(head);        // swap node function called
+    display(head);                 // display function called
     return 0;
 }
