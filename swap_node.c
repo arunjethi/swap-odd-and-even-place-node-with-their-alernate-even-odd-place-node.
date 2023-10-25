@@ -1,4 +1,4 @@
-// Swaping the node: even with even node && odd with odd node.
+// Swaping the node: even position with even position node && odd position with odd position node.
 // input: 1 12 1 11 1 10 1 9 1 8 1 7 1 6 1 5 1 4 1 3 1 2 1 1 0
 // output: 3 4 1 2 7 8 5 6 11 12 9 10 
 
